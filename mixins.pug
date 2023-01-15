@@ -1,0 +1,22 @@
+mixin main-top(img,title)
+ .main__item 
+        .main__img 
+         img(src=img, alt="")
+        .main__title 
+         span=title 
+
+mixin main-bottom(img,title,price)
+ .main__list 
+       .main__bottom_item 
+        .main_bottom__img 
+         img(src=img, alt="")
+        .main__bottom__title 
+         span=title 
+        .main__rate 
+         i.fa-solid.fa-star
+         i.fa-solid.fa-star
+         i.fa-solid.fa-star
+         i.fa-solid.fa-star
+         i.fa-solid.fa-star
+        .main__price 
+         span=price 

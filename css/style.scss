@@ -1,0 +1,224 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  list-style: none;
+  text-decoration: none;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+body {
+  min-height: 100vh;
+}
+.header{
+  
+  height: 80px;
+  background-color: white;
+  color: red;
+  width: 100%;
+  
+  .nav{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 100%;
+      .nav__logo{
+          width: 30%;
+      }
+      .nav__remote{
+          width: 70%;
+          align-items: center;
+          justify-content: center;
+          
+          .nav__remote--items{
+              display: flex;
+              justify-content: space-around;
+              height: 55px;
+              // background-color: red;
+             
+              align-items: center;
+              a{  
+                  font-size: 20px;
+                  color: black;
+                  font-weight: 1000;
+                  padding-left: 10px;
+                  &:hover{
+                      color: yellow;
+                  }
+
+              }
+              .sub-nav{
+                  display: none;
+                  position: absolute;
+                  box-sizing: border-box;
+                  background-color: black;
+                  width: 150px;
+                  height: 100px;
+                  padding-block: 10px;
+
+                  a{
+                     margin: 15px;
+                     line-height: 25px;
+                  }
+              }
+              .dropdown:hover>.sub-nav{
+                  display: block;
+              }
+          }
+          .nav__remote--hotline{
+              display: flex;
+              // background-color: aqua;
+              height: 30px;
+              justify-content: end;
+              align-items: center;
+              font-weight: 500    ;
+              padding-right: 20px;
+              li{
+                  padding-left: 10px; 
+              }
+          }
+      }
+  }
+}
+.main{
+  
+  .main-top{
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    text-align: center;
+    margin: 20px 65px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 50px;
+  }
+  .h2{
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    // margin: 20px auto;
+    padding-top: 50px;
+  }
+  .main-bottom{
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      padding: 25px 0;
+      padding-top: 45px;
+    }
+    .main__bottom__title {
+
+      font-size: 30px;
+    }
+    .main__rate{
+      color: yellow;
+    }
+    text-align: center;
+    margin: 20px 65px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 50px;
+  }
+}
+.footer {
+  color:black;
+  background:#e7e7e7;
+  // padding-top: 60px;
+  margin-top: 100px;
+  padding-bottom: 40px;
+  padding-top: 30px;
+
+  &-list {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-gap: 0 80px;
+  }
+
+  &-icon {
+      margin-bottom: 30px;
+  }
+
+  .item1 {
+      justify-self: flex-start;
+      grid-column: 1 / 3;
+  }
+
+  &-text {
+      padding-top: 100px;
+      padding-right: 120px;
+  }
+  
+  
+  &-col {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+  }
+  
+  &-logo {
+      width: 100%;
+      height: 100%;
+      border-radius: 50px;
+      overflow: hidden;
+  }
+
+  &-link {
+      transition: color .1s ease;
+
+      &:hover {
+          color: #fff;
+      }
+  }
+
+  @media (max-width: 1023px) {
+      &-list {
+          grid-gap: 0;
+          padding: 0 20px;
+      }
+
+      &-text {
+          padding-right: 50px;
+      }
+  }
+
+  @media (max-width: 767px) {
+      padding-top: 80px;
+      padding-bottom: 20px;
+
+      &-list {
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 30px 50px;
+      }
+
+      .item1 {
+          grid-row: 3;
+      }
+
+      &-logo {
+          align-self: center;
+      }
+
+      &-col {
+          text-align: center;
+      }
+
+      &-text {
+          padding-top: 20px;
+          font-size: 14px;
+          padding-right: 0;
+      }
+  }
+}
